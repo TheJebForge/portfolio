@@ -23,11 +23,11 @@ export const PROJECTS = [
                 <p>
                     The project was started out of frustration that the official Elgato Stream Deck software only
                     supports Windows and Mac platforms. So, if you have the hardware
-                    and you're running Linux as your main OS,
+                    and you&apos;re running Linux as your main OS,
                     the device becomes a paperweight.
                 </p>
                 <p>
-                    I've tried to solve that by starting my own project for this,
+                    I&apos;ve tried to solve that by starting my own project for this,
                     the idea of the project is to be as extensible as possible.
                     Plugins should be able to change almost everything and are the
                     primary way to get more functionality out of the software.
@@ -51,22 +51,22 @@ export const PROJECTS = [
                     What I&apos;ve learned
                 </h4>
                 <p>
-                    This project taught me to pick "the right tool for the job". Starting the project on
-                    Rust language was somewhat of a mistake, but I'm glad I did. Implementing plugin support
+                    This project taught me to pick &qout;the right tool for the job&qout;. Starting the project on
+                    Rust language was somewhat of a mistake, but I&apos;m glad I did. Implementing plugin support
                     on Rust would require me to essentially write my application multiple times.
                     I would have to write the actual application, then I would have to write the
-                    application's <Tooltip
+                    application&apos;s <Tooltip
                         link={'https://en.wikipedia.org/wiki/Foreign_function_interface'}
                         value={'Foreign Function Interface'}>
                         FFI
                     </Tooltip>,
-                    and then write FFI for plugins to use, and even then I'm not done.
-                    I'll also have to write an entire SDK for plugins, so plugin dev wouldn't be miserable.
+                    and then write FFI for plugins to use, and even then I&apos;m not done.
+                    I&apos;ll also have to write an entire SDK for plugins, so plugin dev wouldn&apos;t be miserable.
                 </p>
                 <p>
                     Experiencing so many problems writing this software on Rust got rid of my fanaticism
                     over Rust and made me explore other programming languages. If I started this project on C# first,
-                    I wouldn't have this valuable experience.
+                    I wouldn&apos;t have this valuable experience.
                 </p>
             </>,
             side: <>
@@ -114,7 +114,7 @@ export const PROJECTS = [
                         value={'Abstract Syntax Tree'}>AST</Tooltip> that
                     represents the code in a usable form. This project supports preprocessor macros, so before
                     I start conversion to Trickster spells, I apply the macros to any call expression that has the macro&apos;s
-                    name, unwrapping the code that the macro contains and replacing the macro's argument markers with whatever
+                    name, unwrapping the code that the macro contains and replacing the macro&apos;s argument markers with whatever
                     expressions that were initially passed to the call expression.
                 </p>
                 <p>
