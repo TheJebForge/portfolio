@@ -1,0 +1,58 @@
+.svg-background {
+    position: absolute;
+    z-index: 0;
+    height: auto;
+    filter: brightness(70%);
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@media (min-width: 600px) {
+    .svg-background {
+        width: 90%;
+        right: -10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .svg-background {
+        width: 900px;
+        right: -20%;
+    }
+}
+
+
+.svg-background-hero {
+    position: fixed;
+    top: 40%;
+}
+
+.svg-background-page {
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    right: -10%;
+}
+
+@media (min-width: 1200px) {
+    .svg-background-hero {
+        right: 20px;
+        width: 70vw;
+        top: 30%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .svg-background-hero {
+        right: 20px;
+        width: 70vw;
+        top: 37%;
+    }
+}
+
+@media (max-width: 600px) {
+    .svg-background-hero {
+        right: -30%;
+        width: 90vh;
+    }
+}

@@ -1,0 +1,21 @@
+.tooltip {
+    position: fixed;
+
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+
+    background-color: #171717;
+    font-size: 24px;
+    font-weight: 600;
+
+    top: 50%;
+    left: 50%;
+
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.marked {
+    text-decoration: underline;
+}

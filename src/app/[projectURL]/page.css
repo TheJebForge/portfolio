@@ -1,0 +1,103 @@
+h4 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+
+.main-content {
+    font-size: 20px;
+    font-weight: 500;
+
+    margin: 0 10px;
+}
+
+.page-container-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 600px;
+}
+
+
+.side-content {
+    display: inline-block;
+
+    width: 600px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+}
+
+.carousel {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 10px 0 0 10px;
+    background-color: #171717;
+    border-radius: 10px;
+}
+
+.side-content-grid {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.side-section {
+    background-color: #171717;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.side-section a {
+    text-decoration: underline;
+}
+
+.image-container {
+    width: 50%;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+@media (max-width: 1000px) {
+    .side-content {
+        display: block;
+        float: none;
+        width: auto;
+        margin: 0 -10px -10px;
+    }
+
+    .page-container-grid {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    .embla {
+        padding: 10px 0 0 0;
+    }
+
+    .embla__slide {
+        padding-left: 25px;
+    }
+
+    .carousel {
+        margin: 10px 0 0 0;
+    }
+
+    .embla__viewport {
+        min-height: 350px;
+    }
+
+    .embla__container {
+        min-height: 350px;
+    }
+}

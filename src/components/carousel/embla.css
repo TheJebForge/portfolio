@@ -1,0 +1,139 @@
+.embla {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0 0 10px;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    height: calc(100% - 50px);
+    min-height: 300px;
+}
+
+.embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: -15px;
+    height: 100%;
+    min-height: 300px;
+}
+
+.embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 100%;
+    min-width: 0;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.embla__slide__contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    user-select: none;
+    flex-direction: column;
+}
+
+.carousel-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-image-title {
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.embla__controls {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.embla__dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: -9px;
+}
+
+.embla__dot {
+    -webkit-tap-highlight-color: rgba(230, 230, 230, 0.5);
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.embla__dot:after {
+    box-shadow: inset 0 0 0 0.2rem rgb(62 62 62);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    content: '';
+}
+
+.embla__dot--selected:after {
+    box-shadow: inset 0 0 0 0.2rem rgb(222, 222, 222);
+}
+
+.fullscreen-image-viewer {
+    background-color: #0a0a0add;
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    padding: 64px 20px;
+}
+
+.fullscreen-image-container {
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-image-viewer-cross {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    text-align: center;
+    margin-top: -20px;
+    z-index: 100;
+}
+
+.fullscreen-image-viewer-cross:after{
+    content: "\00d7";
+}
+
+.youtube-player {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
