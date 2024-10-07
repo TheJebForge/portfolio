@@ -128,7 +128,7 @@ export const PROJECTS = [
                     spell and attempts to identify fragments and map them to LISP representations, then it maps SpellParts
                     with PatternGlyphs into trick call LISP representations with complex logic to avoid unnecessary
                     parentheses and pattern detection to simplify certain pairs of tricks into simpler representations.
-                    In the end, I get with equivalent LISP AST representation of the Trickster spell.
+                    In the end, I get the equivalent LISP AST representation of the Trickster spell.
                 </p>
                 <h4>
                     What I learned
