@@ -1,6 +1,7 @@
 import StreamduckSVG from './project_svg/streamduck.svg';
 import TricksterLISP from './project_svg/trickster-lisp.svg';
-import {Tooltip} from "@/components/Tooltip";
+import MeshSVG from './project_svg/mesh.svg';
+import {Tooltip} from '@/components/Tooltip';
 
 export const PROJECTS = [
     {
@@ -77,8 +78,66 @@ export const PROJECTS = [
         }
     },
     {
-        name: "Trickster LISP",
-        shortDesc: "LISP transpiler for Trickster",
+        name: 'elgato-streamdeck',
+        shortDesc: 'Rust library for Elgato Stream Decks',
+        icon: StreamduckSVG,
+        cardBackground: 'linear-gradient(135deg, #584063ff 10%, #dc76adff 100%)',
+        page: {
+            slides: [
+                {
+                    src: '/images/streamdeck-sample.jpg',
+                    alt: 'Elgato Stream Deck running library\'s sample project',
+                    showTitle: true
+                }
+            ],
+            content: <>
+                <h4>
+                    What is this?
+                </h4>
+                <p>
+                    This project was developed in conjunction with Rust version of Streamduck, it allows for easy
+                    interaction with Elgato Stream Decks while being <i>✨blazingly fast✨</i>. Some other libraries
+                    already existed to fill this purpose on Rust language, but they were pretty limited. So I made my
+                    own!
+                </p>
+                <p>
+                    It&apos;s using hidapi to interact with Stream Deck devices, a lot of HID code was taken from libraries
+                    on other languages, since it was already reverse engineered. But I made the library&apos;s API
+                    fit Streamduck&apos;s needs.
+                </p>
+                <p>
+                    Nowadays there&apos;s a third party project that&apos;s using this library - <a href={'https://github.com/ninjadev64/OpenDeck'} target={'_blank'}>OpenDeck</a>.
+                    That software appears to be an open-source alternative for Elgato&apos;s software, they helped out
+                    with development of elgato-streamdeck by creating issues and submitting pull requests.
+                </p>
+                <p>
+                    I plan to make a C# library that will wrap this library as a native module, so I can keep using
+                    the work that went into this library with newer version of Streamduck.
+                </p>
+                <h4>
+                    What I learned
+                </h4>
+                <p>
+                    I learned how to interact with HID devices and develop libraries around that, and now the result
+                    is serving the open-source community too!
+                </p>
+            </>,
+            side: <>
+                <span>
+                    This project has over 10k downloads!
+                </span>
+                <a href={'https://github.com/streamduck-org/elgato-streamdeck'} target={'_blank'}>
+                    View Project&apos;s Github
+                </a>
+                <a href={'https://crates.io/crates/elgato-streamdeck'} target={'_blank'}>
+                    View crates.io
+                </a>
+            </>
+        }
+    },
+    {
+        name: 'Trickster LISP',
+        shortDesc: 'LISP transpiler for Trickster',
         icon: TricksterLISP,
         cardBackground: 'linear-gradient(135deg, #707dad 10%, #88bdb8 100%)',
         page: {
@@ -140,11 +199,86 @@ export const PROJECTS = [
                 </p>
             </>,
             side: <>
-                <a href={'https://modrinth.com/mod/trickster-lisp'} target={"_blank"}>
+                <a href={'https://modrinth.com/mod/trickster-lisp'} target={'_blank'}>
                     View Mod page
                 </a>
-                <a href={'https://github.com/TheJebForge/trickster-lisp'} target={"_blank"}>
+                <a href={'https://github.com/TheJebForge/trickster-lisp'} target={'_blank'}>
                     View Mod source code
+                </a>
+            </>
+        }
+    },
+    {
+        name: 'Navmesh System',
+        shortDesc: 'Pathfinding system for Resonite',
+        icon: MeshSVG,
+        cardBackground: 'linear-gradient(135deg, rgb(67 118 128) 10%, rgb(50 124 79) 100%)',
+        page: {
+            slides: [
+                {
+                    youtube: 'TI-qpLwl4h8',
+                    title: 'Awards Ceremony'
+                },
+                {
+                    youtube: '4i_CRigihu4',
+                    title: 'WorldHop section'
+                }
+            ],
+            content: <>
+                <h4>
+                    What is this?
+                </h4>
+                <p>
+                    This project allows people to design navigation meshes and have agents that use those meshes to
+                    pathfind to different points on the mesh. It was made during <Tooltip value={'Metaverse Maker Competition'} link={'https://wiki.resonite.com/MMC'}>MMC</Tooltip> in 2024,
+                    and <a href={'https://wiki.resonite.com/MMC_2024#Winners'} target={'_blank'}>won one of the categories</a>!
+                </p>
+                <p>
+                    The project solves one of the problems that need to be solved before you can have working <Tooltip value={'Non-Playable Characters'} link={'https://en.wikipedia.org/wiki/Non-player_character'}>NPCs</Tooltip>.
+                    Resonite doesn&apos;t have any of the tools necessary built-in to create them, so this project solves the
+                    pathfinding problem. Further systems would be required for an NPC to have some AI, but at least now
+                    it can pathfind.
+                </p>
+                <h4>
+                    What it took
+                </h4>
+                <p>
+                    Pathfinding starts with some sort of graph search algorithm, most common search algorithms include <a href={'https://en.wikipedia.org/wiki/A*_search_algorithm'} target={'_blank'}>A*</a> and <a href={'https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm'} target={'_blank'}>Dijkstra&apos;s algorithm</a>.
+                    The precursor to navmesh systems is waypoint systems. Waypoint systems are a collection of points
+                    where agents search for a path using graph search and navigate to each point in the found path.
+                    Navmesh systems expand on that concept where instead of points, triangles are used instead.
+                    Each triangle has 3 neighbors, and graph search is used with them to find a corridor of triangles that
+                    the agent should go through, but following the centers of the triangles as a path would be too jagged
+                    to be useful.
+                </p>
+                <p>
+                    Another algorithm is used to find a straight path in the corridor of triangles - <a href={'https://en.wikipedia.org/wiki/Any-angle_path_planning'}>Any-angle path planning algorithm</a>.
+                    This project uses the <a href={'https://medium.com/@reza.teshnizi/the-funnel-algorithm-explained-visually-41e374172d2d'}>Funnel algorithm</a> to achieve this, it essentially walks each neighboring side
+                    of the triangles and makes sure that the funnel between the left and right side keeps shrinking, but
+                    once the funnel crosses on itself as it walks, it places a point on the found corner, in the end
+                    creating a path that changes direction only on corners.
+                </p>
+                <p>
+                    However, we don&apos;t even have <a href={'https://en.wikipedia.org/wiki/Rigid_body'} target={'_blank'}>rigid bodies</a> in Resonite, so to keep the agent on the surface of the mesh,
+                    an additional step was added to the Funnel algorithm where when it finds any corner, it will create points
+                    on any triangles since the last path point that have significant changes in their normals using
+                    line intersection math, and only then it will place the corner path point.
+                </p>
+                <p>
+                    All of this was created using Resonite&apos;s visual programming and is made in such a way where anyone
+                    can create a simple agent that follows the player on a navmesh.
+                </p>
+                <h4>
+                    What I learned
+                </h4>
+                <p>
+                    I implemented the A* search algorithm for the first time and learned math to make a navmesh possible,
+                    and now people in Resonite can have agents that pathfind in their worlds!
+                </p>
+            </>,
+            side: <>
+                <a href={'https://wiki.resonite.com/Navmesh_System'} target={'_blank'}>
+                    View Resonite Wiki
                 </a>
             </>
         }

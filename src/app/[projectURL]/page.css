@@ -14,17 +14,22 @@ h4 {
     margin: 0 10px;
 }
 
+.main-content a {
+    color: cadetblue;
+    text-decoration: underline;
+}
+
 .page-container-grid {
     display: grid;
 
-    grid-template-columns: 1fr 600px;
+    grid-template-columns: 1fr 650px;
 }
 
 
 .side-content {
     display: inline-block;
 
-    width: 600px;
+    width: 650px;
     margin-right: -10px;
     margin-bottom: -10px;
 }
