@@ -1,3 +1,4 @@
+import GithubSVG from './app/images/github.svg';
 import StreamduckSVG from './project_svg/streamduck.svg';
 import TricksterLISP from './project_svg/trickster-lisp.svg';
 import MeshSVG from './project_svg/mesh.svg';
@@ -279,6 +280,53 @@ export const PROJECTS = [
             side: <>
                 <a href={'https://wiki.resonite.com/Navmesh_System'} target={'_blank'}>
                     View Resonite Wiki
+                </a>
+                <a href={'https://resonite.com/'} target={'_blank'}>
+                    View Resonite Site
+                </a>
+            </>
+        }
+    },
+    {
+        name: 'Portfolio',
+        shortDesc: 'The site you\'re looking at',
+        icon: GithubSVG,
+        cardBackground: 'linear-gradient(135deg, hsl(0, 100%, 20%) 0%, hsl(39, 100%, 43%) 100%)',
+        page: {
+            content: <>
+                <h4>
+                    Why?
+                </h4>
+                <p>
+                    This site was made from the necessity of listing all the different projects I&apos;ve created,
+                    I&apos;m interested in a lot of things and have been doing a lot of things, so having someplace where I
+                    can list the projects is important.
+                </p>
+                <p>
+                    The site was created with Next.js static builder, I&apos;m very familiar with React when it comes to
+                    web frontend, so it looked like the perfect choice. It&apos;s also structured in such a way, where I only
+                    have to keep updating the <code>data.jsx</code> file to keep adding more projects, and most of the
+                    fields are optional for projects, and the page will change to fit.
+                </p>
+                <p>
+                    The site is hosted with Github Pages, since the source code of this site is public, Github provides
+                    free hosting for static pages.
+                </p>
+                <p>
+                    Another benefit of hosting with Github Pages - Github Actions. Whenever a change is made to the repository,
+                    Github automatically starts building and deploying actions to update the site.
+                </p>
+                <h4>
+                    What&apos;s next?
+                </h4>
+                <p>
+                    I&apos;ll keep listing more projects on this site as they appear (or I remember about them), I might
+                    update the looks of the site in the future if I feel like it.
+                </p>
+            </>,
+            side: <>
+                <a href={'https://github.com/TheJebForge/portfolio'} target={"_blank"}>
+                    View Project&apos;s Github
                 </a>
             </>
         }

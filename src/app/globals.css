@@ -49,3 +49,9 @@ h3 {
 p {
     margin-bottom: 15px;
 }
+
+code {
+    background-color: #3e3e3e;
+    padding: 0 5px;
+    border-radius: 5px;
+}
