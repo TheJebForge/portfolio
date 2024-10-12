@@ -252,8 +252,8 @@ export const PROJECTS = [
                     to be useful.
                 </p>
                 <p>
-                    Another algorithm is used to find a straight path in the corridor of triangles - <a href={'https://en.wikipedia.org/wiki/Any-angle_path_planning'}>Any-angle path planning algorithm</a>.
-                    This project uses the <a href={'https://medium.com/@reza.teshnizi/the-funnel-algorithm-explained-visually-41e374172d2d'}>Funnel algorithm</a> to achieve this, it essentially walks each neighboring side
+                    Another algorithm is used to find a straight path in the corridor of triangles - <a href={'https://en.wikipedia.org/wiki/Any-angle_path_planning'} target={'_blank'}>Any-angle path planning algorithm</a>.
+                    This project uses the <a href={'https://medium.com/@reza.teshnizi/the-funnel-algorithm-explained-visually-41e374172d2d'} target={'_blank'}>Funnel algorithm</a> to achieve this, it essentially walks each neighboring side
                     of the triangles and makes sure that the funnel between the left and right side keeps shrinking, but
                     once the funnel crosses on itself as it walks, it places a point on the found corner, in the end
                     creating a path that changes direction only on corners.
