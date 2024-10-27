@@ -2,7 +2,16 @@ import './page.css';
 import {Card} from "@/components/Card";
 import GithubSVG from './images/github.svg';
 import {SVGBackground} from "@/components/SVGBackground";
-import {nameToURL, readAllProjects} from "@/utils";
+import {readAllProjects} from "@/utils";
+
+export const metadata = {
+    other: {
+        "og:title": `TheJebForge Portfolio`,
+        "og:description": 'Collection of projects created by TheJebForge',
+        "og:type": 'website',
+        "theme-color": '#ff9900'
+    }
+};
 
 export default async function Home() {
     const projects = await readAllProjects();

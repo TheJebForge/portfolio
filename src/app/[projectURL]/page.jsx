@@ -10,6 +10,19 @@ export async function generateStaticParams() {
     }))
 }
 
+export async function generateMetadata({ params: { projectURL }}) {
+    const project = await readProject(projectURL);
+
+    return {
+        other: {
+            "og:title": `${project.title} - TheJebForge Portfolio`,
+            "og:description": project.desc,
+            "og:type": 'website',
+            "theme-color": '#ff9900'
+        }
+    };
+}
+
 export default async function Page({
                                        params: {projectURL}
                                    }) {
