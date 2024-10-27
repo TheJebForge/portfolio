@@ -1,7 +1,7 @@
 import GithubSVG from './app/images/github.svg';
-import StreamduckSVG from './project_svg/streamduck.svg';
-import TricksterLISP from './project_svg/trickster-lisp.svg';
-import MeshSVG from './project_svg/mesh.svg';
+import StreamduckSVG from '../projects/icons/streamduck.svg';
+import TricksterLISP from '../projects/icons/trickster-lisp.svg';
+import MeshSVG from '../projects/icons/mesh.svg';
 import {Tooltip} from '@/components/Tooltip';
 
 export const PROJECTS = [

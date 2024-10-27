@@ -41,10 +41,10 @@ export function Tooltip({
     return <>
         {
             link ?
-                <a href={link} target={'_blank'} onMouseMove={mouseMove} onMouseLeave={mouseLeave}>
+                <a className={'tooltip-target'} href={link} target={'_blank'} onMouseMove={mouseMove} onMouseLeave={mouseLeave}>
                     {children}
                 </a>
-                : <span onMouseMove={mouseMove} onMouseLeave={mouseLeave}>
+                : <span className={'tooltip-target'} onMouseMove={mouseMove} onMouseLeave={mouseLeave}>
                     {children}
                 </span>
         }

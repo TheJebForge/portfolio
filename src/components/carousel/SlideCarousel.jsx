@@ -22,7 +22,7 @@ const SlideCarousel = (props) => {
                     <Image src={element.src} alt={element.alt} fill={true}
                            objectFit={'contain'}/>
                 </div>
-                {element.showTitle && <div className={'carousel-image-title'}>
+                {(element.showTitle || element['show-title']) && <div className={'carousel-image-title'}>
                     {element.alt}
                 </div>}
             </>;

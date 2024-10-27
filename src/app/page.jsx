@@ -1,18 +1,15 @@
 import './page.css';
 import {Card} from "@/components/Card";
-import {PROJECTS} from "@/data";
 import GithubSVG from './images/github.svg';
 import {SVGBackground} from "@/components/SVGBackground";
-import {nameToURL} from "@/utils";
+import {nameToURL, readAllProjects} from "@/utils";
 
-export default function Home() {
-    const projects = [
-        ...PROJECTS
-    ]
+export default async function Home() {
+    const projects = await readAllProjects();
 
     return (
         <div>
-            <Card cardClass={'main-card'} background={<SVGBackground src={GithubSVG} type={'hero'}/>}>
+            <Card cardClass={'main-card'} background={<SVGBackground type={'hero'}><GithubSVG/></SVGBackground>}>
                 <h1>
                     Hi! I&apos;m TheJebForge
                 </h1>
@@ -31,17 +28,17 @@ export default function Home() {
                         cardClass={'side-card'}
                         key={index}
                         background={
-                            project.icon && <SVGBackground src={project.icon}/>
+                            project.icon && <SVGBackground>{project.icon}</SVGBackground>
                         }
-                        cardStyle={project.cardBackground && {background: project.cardBackground}}
-                        link={ project.page && `/${nameToURL(project.name)}` }>
-                        {project.name && <h1>
-                            {project.name}
+                        cardStyle={project.background && {background: project.background}}
+                        link={project.page && `/${project.name}`}>
+                        {project.title && <h1>
+                            {project.title}
                         </h1>}
-                        {project.shortDesc && <h2 style={{color: 'lightgray'}}>
-                            {project.shortDesc}
+                        {project.desc && <h2 style={{color: 'lightgray'}}>
+                            {project.desc}
                         </h2>}
-                        {(!project.noPage && project.page) && <h3 className={'read-more'}>
+                        {project.page && <h3 className={'read-more'}>
                             Check it out &gt;
                         </h3>}
                     </Card>;

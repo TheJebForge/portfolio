@@ -76,7 +76,7 @@ h4 {
 @media (max-width: 1000px) {
     .side-content {
         display: block;
-        float: none;
+        float: none !important;
         width: auto;
         margin: 0 -10px -10px;
     }

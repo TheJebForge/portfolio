@@ -1,22 +1,19 @@
-import {PROJECTS} from "@/data";
-import {nameToURL} from "@/utils";
+import {listProjects, readProject} from "@/utils";
 import {Card} from "@/components/Card";
 import {SVGBackground} from "@/components/SVGBackground";
 import SlideCarousel from "@/components/carousel/SlideCarousel";
 import './page.css'
 
-
-export function generateStaticParams() {
-    return PROJECTS.map((project) => ({
-        projectURL: nameToURL(project.name),
+export async function generateStaticParams() {
+    return (await listProjects()).map((project) => ({
+        projectURL: project,
     }))
 }
 
-export default function Page({
-    params: { projectURL }
-}) {
-
-    const project = PROJECTS.find(p => nameToURL(p.name) === projectURL);
+export default async function Page({
+                                       params: {projectURL}
+                                   }) {
+    const project = await readProject(projectURL);
 
     const carousel = <div className={'carousel'}>
         <SlideCarousel slides={project.page.slides ?? []}/>
@@ -29,14 +26,14 @@ export default function Page({
         <Card
             cardClass={'page-card'}
             background={
-                project.icon && <SVGBackground src={project.icon} type={'page'}/>
+                project.icon && <SVGBackground type={'page'}>{project.icon}</SVGBackground>
             }
-            cardStyle={project.cardBackground && {background: project.cardBackground}}>
-            {project.name && <h1>
-                {project.name}
+            cardStyle={project.background && {background: project.background}}>
+            {project.title && <h1>
+                {project.title}
             </h1>}
-            {project.shortDesc && <h2 style={{color: 'lightgray'}}>
-                {project.shortDesc}
+            {project.desc && <h2 style={{color: 'lightgray'}}>
+                {project.desc}
             </h2>}
         </Card>
         {project.page.side && <div className={'side-section'}>
@@ -51,11 +48,11 @@ export default function Page({
                 {carousel}
             </div>
             <div className={'main-content'}>
-                {project.page.content}
+                {project.page.contents}
             </div>
         </>
         : <div className={'main-content'}>
             {sideContent}
-            {project.page.content}
+            {project.page.contents}
         </div>;
 }

@@ -1,24 +1,29 @@
 .navbar-container {
     position: sticky;
     top: 0;
+    left: 0;
     height: 64px;
     background-color: #0a0a0a;
-    padding-bottom: 2px;
     z-index: 2;
+    display: inline-flex;
+    border-radius: 0 0 40px 0;
+
+    border-right: solid #0a0a0a 4px;
+    border-bottom: solid #0a0a0a 4px;
 }
 
 .navbar {
     height: 100%;
     border-radius: 10px;
-    border-bottom: solid #0a0a0a 2px;
     transition: border-bottom-color 250ms;
     padding: 10px;
     display: flex;
     align-items: center;
 }
 
-html:not([data-scroll="0"]) .navbar {
-    border-bottom: solid #171717 2px;
+html:not([data-scroll="0"]) .navbar-container {
+    border-right: solid #171717 4px;
+    border-bottom: solid #171717 4px;
 }
 
 .navbar-main {

@@ -15,3 +15,7 @@
     white-space: nowrap;
     pointer-events: none;
 }
+
+.tooltip-target {
+    text-decoration: underline;
+}
