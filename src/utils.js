@@ -82,7 +82,7 @@ export async function readProject(name) {
             sideLinks.push(
                 child.props.href ?
                     <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
-                    : <span>{child.props.children}</span>
+                    : <span key={contentsCount}>{child.props.children}</span>
             );
         } else if (child.type === 'slide') {
             slides.push(child.props);
