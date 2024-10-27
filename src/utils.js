@@ -1,11 +1,6 @@
 import fs from "node:fs/promises";
 import { compiler } from "markdown-to-jsx";
 import {Tooltip} from "@/components/Tooltip";
-import dynamic from "next/dynamic";
-
-export function nameToURL(name) {
-    return name && name.toLowerCase().replaceAll(" ", "-");
-}
 
 export const PROJECTS_DIRECTORY = process.cwd() + "/projects";
 
