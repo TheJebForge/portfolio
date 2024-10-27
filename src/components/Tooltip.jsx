@@ -31,7 +31,7 @@ export function Tooltip({
         tooltip.style.left = `${x}px`;
     }
 
-    function mouseLeave(event) {
+    function mouseLeave() {
         if (!ref.current) return;
         const tooltip = ref.current;
 
