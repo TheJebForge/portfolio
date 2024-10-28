@@ -12,3 +12,26 @@
     background-color: #00000050;
     user-select: none;
 }
+
+.project-container {
+    display: grid;
+}
+
+@media (min-width: 1800px) {
+    .project-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 1800px) {
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-container {
+        grid-template-columns: unset;
+    }
+}

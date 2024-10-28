@@ -31,7 +31,7 @@ export default async function Home() {
             <div className={'things-text'}>
                 {"Things I've done"}
             </div>
-            <div className={"columns-xl gap-0"}>
+            <div className={"project-container gap-0"}>
                 {projects.map((project, index) => {
                     return <Card
                         cardClass={'side-card'}

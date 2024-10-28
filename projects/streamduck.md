@@ -2,6 +2,7 @@
 <desc>Macro Device Software</desc>
 <icon>streamduck.svg</icon>
 <background>linear-gradient(135deg, #584063ff 10%, #dc76adff 100%)</background>
+<order>0</order>
 <side href="https://github.com/streamduck-org/streamduck">View Project's Github</side>
 <slide src="/images/streamduck-screenshot.png" alt="Old Streamduck Screenshot" show-title/>
 

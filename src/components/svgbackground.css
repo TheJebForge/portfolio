@@ -52,7 +52,7 @@
 @media (max-width: 1200px) {
     .svg-background-hero svg {
         right: 20px;
-        width: 70vw;
+        width: 80%;
         top: 37%;
     }
 }
@@ -60,6 +60,6 @@
 @media (max-width: 600px) {
     .svg-background-hero svg {
         right: -30%;
-        width: 90vh;
+        width: 110%;
     }
 }

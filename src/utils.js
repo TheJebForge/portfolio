@@ -16,6 +16,13 @@ export async function listProjects() {
     return projects;
 }
 
+const TAGGED_META = [
+    'title',
+    'desc',
+    'background',
+    'order'
+];
+
 export async function readProject(name) {
     const filePath = PROJECTS_DIRECTORY + '/' + name + '.md';
     const contents = (await fs.readFile(filePath)).toString();
@@ -45,24 +52,14 @@ export async function readProject(name) {
     const normal = [];
 
     for (const child of element.props.children) {
-        if (child.type === 'title' && child.props.children) {
-            project.title = child.props.children[0];
-            continue;
-        }
-
-        if (child.type === 'desc' && child.props.children) {
-            project.desc = child.props.children[0];
-            continue;
-        }
-
         if (child.type === 'icon' && child.props.children) {
             const Icon = (await import('/projects/icons/' + child.props.children[0])).default;
             project.icon = <Icon/>;
             continue;
         }
 
-        if (child.type === 'background' && child.props.children) {
-            project.background = child.props.children[0];
+        if (TAGGED_META.includes(child.type) && child.props.children) {
+            project[child.type] = child.props.children[0];
             continue;
         }
 
@@ -96,8 +93,23 @@ export async function readProject(name) {
 }
 
 export async function readAllProjects() {
-    return Promise.all(
+    return (await Promise.all(
         (await listProjects())
             .map(name => readProject(name))
+    )).sort(
+        (a, b) => {
+            const aO = a.order;
+            const bO = b.order;
+
+            if (aO === undefined) {
+                return 1;
+            }
+
+            if (bO === undefined) {
+                return -1;
+            }
+
+            return parseInt(aO) - parseInt(bO);
+        }
     );
 }

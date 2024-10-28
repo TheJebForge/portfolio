@@ -2,6 +2,7 @@
 <desc>Rust library for Elgato Stream Decks</desc>
 <icon>streamduck.svg</icon>
 <background>linear-gradient(135deg, #584063ff 10%, #dc76adff 100%)</background>
+<order>1</order>
 <side>This project has over 10k downloads!</side>
 <side href="https://github.com/streamduck-org/elgato-streamdeck">View Project's Github</side>
 <side href="https://crates.io/crates/elgato-streamdeck">View crates.io</side>
