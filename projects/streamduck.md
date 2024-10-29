@@ -5,6 +5,7 @@
 <order>0</order>
 <side href="https://github.com/streamduck-org/streamduck">View Project's Github</side>
 <slide src="/images/streamduck-screenshot.png" alt="Old Streamduck Screenshot" show-title/>
+<slide youtube="bkQea3W3MsA" title="GIF Rendering comparison"/>
 
 #### How it started
 
