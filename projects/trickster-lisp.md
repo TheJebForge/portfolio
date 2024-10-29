@@ -2,7 +2,7 @@
 <desc>LISP transpiler for Trickster</desc>
 <icon>trickster-lisp.svg</icon>
 <background>linear-gradient(135deg, #707dad 10%, #88bdb8 100%)</background>
-<order>3</order>
+<order>4</order>
 <side href="https://modrinth.com/mod/trickster-lisp">View Mod page</side>
 <side href="https://github.com/TheJebForge/trickster-lisp">View Mod source code</side>
 <slide youtube="3KlrjCYHStc" title="Showcase"/>
