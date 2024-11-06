@@ -5,7 +5,7 @@
 <order>4</order>
 <side href="https://modrinth.com/mod/trickster-lisp">View Mod page</side>
 <side href="https://github.com/TheJebForge/trickster-lisp">View Mod source code</side>
-<slide youtube="3KlrjCYHStc" title="Showcase"/>
+<slide youtube="Tma-8ivRoxg" title="Showcase"/>
 
 #### What is this?
 
