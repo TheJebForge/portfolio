@@ -1,5 +1,8 @@
 <title>Streamduck</title>
 <desc>Macro Device Software</desc>
+<skill>.NET</skill>
+<skill>Rust</skill>
+<skill>HIDAPI</skill>
 <icon>streamduck.svg</icon>
 <background>linear-gradient(135deg, #584063ff 10%, #dc76adff 100%)</background>
 <order>0</order>

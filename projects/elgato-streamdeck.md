@@ -1,5 +1,7 @@
 <title>elgato-streamdeck</title>
 <desc>Rust library for Elgato Stream Decks</desc>
+<skill>Rust</skill>
+<skill>HIDAPI</skill>
 <icon>streamduck.svg</icon>
 <background>linear-gradient(135deg, #584063ff 10%, #dc76adff 100%)</background>
 <order>1</order>

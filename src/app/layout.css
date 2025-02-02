@@ -1,14 +1,14 @@
 .navbar-container {
     position: sticky;
     top: 0;
-    left: 0;
+    left: 100vw;
     height: 64px;
     background-color: #0a0a0a;
     z-index: 2;
     display: inline-flex;
-    border-radius: 0 0 40px 0;
+    border-radius: 0 0 0 40px;
 
-    border-right: solid #0a0a0a 4px;
+    border-left: solid #0a0a0a 4px;
     border-bottom: solid #0a0a0a 4px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 html:not([data-scroll="0"]) .navbar-container {
-    border-right: solid #171717 4px;
+    border-left: solid #171717 4px;
     border-bottom: solid #171717 4px;
 }
 

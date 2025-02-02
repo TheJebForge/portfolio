@@ -19,6 +19,7 @@ export async function listProjects() {
 const TAGGED_META = [
     'title',
     'desc',
+    'about',
     'background',
     'order'
 ];
@@ -28,7 +29,8 @@ export async function readProject(name) {
     const contents = (await fs.readFile(filePath)).toString();
 
     const project = {
-        name
+        name,
+        skills: []
     };
 
     const element = compiler(
@@ -78,6 +80,8 @@ export async function readProject(name) {
             );
         } else if (child.type === 'slide') {
             slides.push(child.props);
+        } else if (child.type === 'skill' && child.props.children) {
+            project.skills.push(child.props.children[0]);
         } else {
             normal.push(child);
         }

@@ -8,7 +8,7 @@
     position: absolute;
     z-index: 0;
     height: auto;
-    filter: brightness(70%);
+    filter: brightness(80%);
     top: 50%;
     transform: translate(0, -50%);
     object-fit: cover;

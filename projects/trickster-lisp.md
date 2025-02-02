@@ -1,5 +1,8 @@
 <title>Trickster LISP</title>
 <desc>LISP transpiler for Trickster</desc>
+<skill>Java</skill>
+<skill>ANTLR</skill>
+<skill>Gradle</skill>
 <icon>trickster-lisp.svg</icon>
 <background>linear-gradient(135deg, #707dad 10%, #88bdb8 100%)</background>
 <order>4</order>

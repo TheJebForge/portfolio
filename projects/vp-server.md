@@ -1,5 +1,8 @@
 <title>Voice Profile Server</title>
 <desc>REST service to manage voice profiles</desc>
+<skill>Rust</skill>
+<skill>Rocket.rs</skill>
+<skill>PostgreSQL</skill>
 <icon>vpserver.svg</icon>
 <background>linear-gradient(135deg, #78ab8e 10%, #4babc9 100%)</background>
 <order>3</order>

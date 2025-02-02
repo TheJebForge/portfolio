@@ -1,5 +1,6 @@
 <title>Navmesh System</title>
 <desc>Pathfinding system for Resonite</desc>
+<skill>Pathfinding</skill>
 <icon>mesh.svg</icon>
 <background>linear-gradient(135deg, rgb(67 118 128) 10%, rgb(50 124 79) 100%)</background>
 <side href="https://wiki.resonite.com/Navmesh_System">View Resonite Wiki</side>

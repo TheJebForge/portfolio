@@ -1,5 +1,7 @@
 <title>Portfolio</title>
 <desc>The site you're looking at</desc>
+<skill>React.js</skill>
+<skill>Next.js</skill>
 <icon>github.svg</icon>
 <background>linear-gradient(135deg, hsl(0, 100%, 20%) 0%, hsl(39, 100%, 43%) 100%)</background>
 <order>2</order>
