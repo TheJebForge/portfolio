@@ -1,21 +1,22 @@
 .navbar-container {
     position: sticky;
     top: 0;
-    left: 100vw;
+    left: 0;
     height: 64px;
     background-color: #0a0a0a;
     z-index: 2;
     display: inline-flex;
-    border-radius: 0 0 0 40px;
+    border-radius: 0 0 40px 0;
 
     border-left: solid #0a0a0a 4px;
     border-bottom: solid #0a0a0a 4px;
+
+    transition-duration: 0.4s;
 }
 
 .navbar {
     height: 100%;
     border-radius: 10px;
-    transition: border-bottom-color 250ms;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -24,6 +25,9 @@
 html:not([data-scroll="0"]) .navbar-container {
     border-left: solid #171717 4px;
     border-bottom: solid #171717 4px;
+    left: 100vw;
+
+    border-radius: 0 0 0 40px;
 }
 
 .navbar-main {
