@@ -1,4 +1,4 @@
-<title>PGCombatTracker</title>
+<title>PG Combat Tracker</title>
 <desc>Sophisticated Project Gorgon combat log tracker</desc>
 <skill>Go</skill>
 <skill>Low-Level UI</skill>
