@@ -45,6 +45,7 @@
     z-index: 1;
     position: relative;
     user-select: none;
+    word-wrap: break-word;
 }
 
 .main-card {
