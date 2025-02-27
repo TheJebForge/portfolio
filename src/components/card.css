@@ -19,12 +19,12 @@
 }
 
 .card-container:has(.page-card) {
-    height: 350px;
+    height: 400px;
 }
 
 .card {
     height: 100%;
-    min-height: 350px;
+    min-height: 400px;
 
     border-radius: 10px;
 
