@@ -17,5 +17,9 @@
 }
 
 .tooltip-target {
+    font-weight: 900;
+}
+
+.tooltip-target:hover {
     text-decoration: underline;
 }

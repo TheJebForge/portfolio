@@ -6,7 +6,8 @@ export function Card({
     cardClass,
     cardStyle,
     background,
-    link
+    link,
+    side
 }) {
     const card = <div className={['card', cardClass].join(' ')} style={cardStyle}>
         {background}
@@ -15,11 +16,15 @@ export function Card({
         </div>
     </div>;
 
+    const clazz = 'card-container aspect-auto ' + (side ? 'wide' : '')
+
     return link ?
-        <Link href={link} className={'card-container aspect-auto'}>
+        <Link href={link} className={clazz}>
             {card}
+            {side}
         </Link>
-        : <div className={'card-container aspect-auto'}>
+        : <div className={clazz}>
             {card}
+            {side}
         </div>;
 }

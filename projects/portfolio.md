@@ -9,7 +9,7 @@
 
 #### Why?
 
-This site was made from the necessity of listing all the different projects I've created,
+This site was made from the necessity of listing all the different projects I've created.
 I'm interested in a lot of things and have been doing a lot of things, so having someplace where I
 can list the projects is important.
 

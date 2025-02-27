@@ -30,6 +30,8 @@
 
 .project-container {
     display: grid;
+    gap: 16px;
+    margin: 0 16px;
 }
 
 .project-skills {
@@ -62,6 +64,41 @@
     background-color: #1b1b1b;
 }
 
+.card-side-content {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-side-text {
+
+}
+
+.card-side-element-container {
+    position: relative;
+    pointer-events: none;
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+    flex: 1;
+    align-content: center;
+}
+
+.card-side-sub-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    transform: translate(0, -50%);
+}
+
+.card-side-element {
+    min-width: 300px;
+    min-height: 200px;
+    position: relative;
+}
+
 @media (min-width: 1800px) {
     .project-container {
         grid-template-columns: 1fr 1fr 1fr;
@@ -77,6 +114,10 @@
 
 @media (max-width: 1000px) {
     .project-container {
-        grid-template-columns: unset;
+        grid-template-columns: 1fr;
+    }
+
+    .card-side-content {
+        flex: unset;
     }
 }

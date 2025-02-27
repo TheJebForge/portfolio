@@ -61,7 +61,7 @@ export async function readProject(name) {
         }
 
         if (TAGGED_META.includes(child.type) && child.props.children) {
-            project[child.type] = child.props.children[0];
+            project[child.type] = child.props.children[0].trim();
             continue;
         }
 
@@ -102,18 +102,24 @@ export async function readAllProjects() {
             .map(name => readProject(name))
     )).sort(
         (a, b) => {
-            const aO = a.order;
-            const bO = b.order;
-
-            if (aO === undefined) {
+            if (a.about === undefined && b.about !== undefined) {
                 return 1;
-            }
-
-            if (bO === undefined) {
+            } else if (a.about !== undefined && b.about === undefined) {
                 return -1;
-            }
+            } else {
+                const aO = a.order;
+                const bO = b.order;
 
-            return parseInt(aO) - parseInt(bO);
+                if (aO === undefined) {
+                    return 1;
+                }
+
+                if (bO === undefined) {
+                    return -1;
+                }
+
+                return parseInt(aO) - parseInt(bO);
+            }
         }
     );
 }

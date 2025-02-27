@@ -3,6 +3,7 @@ import {Card} from "@/components/Card";
 import {SVGBackground} from "@/components/SVGBackground";
 import SlideCarousel from "@/components/carousel/SlideCarousel";
 import './page.css'
+import React from "react";
 
 export async function generateStaticParams() {
     return (await listProjects()).map((project) => ({
@@ -36,19 +37,28 @@ export default async function Page({
         className={project.page.slides ? 'side-content side-content-grid' : 'side-content'}
         style={project.page.slides ? {} : {float: 'right'}}>
 
-        <Card
-            cardClass={'page-card'}
-            background={
-                project.icon && <SVGBackground type={'page'}>{project.icon}</SVGBackground>
-            }
-            cardStyle={project.background && {background: project.background}}>
-            {project.title && <h1>
-                {project.title}
-            </h1>}
-            {project.desc && <h2 style={{color: 'lightgray'}}>
-                {project.desc}
-            </h2>}
-        </Card>
+        <div className={'side-content-card'}>
+            <Card
+                cardClass={'page-card'}
+                background={
+                    project.icon && <SVGBackground type={'page'}>{project.icon}</SVGBackground>
+                }
+                cardStyle={project.background && {background: project.background}}>
+                {project.title && <h1>
+                    {project.title}
+                </h1>}
+                {project.desc && <h2 style={{color: 'lightgray'}}>
+                    {project.desc}
+                </h2>}
+                <div className={'project-skills'}>
+                    {project.skills && project.skills.map((skill, i) => {
+                        return <span key={i}>
+                                    {skill}
+                                </span>
+                    })}
+                </div>
+            </Card>
+        </div>
         {project.page.side && <div className={'side-section'}>
             {project.page.side}
         </div>}

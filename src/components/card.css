@@ -3,9 +3,15 @@
     width: 100%;
     page-break-inside: avoid;
     break-inside: avoid-column;
-    display: table;
+    display: flex;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    background-color: #191919;
+    border-radius: 10px;
+    min-width: 450px;
+}
+
+.card-container.wide {
+    grid-column: span 2;
 }
 
 .card-container:has(.main-card) {
@@ -18,13 +24,15 @@
 
 .card {
     height: 100%;
-    margin: 10px;
+    min-height: 350px;
 
     border-radius: 10px;
 
     position: relative;
     clip-path: border-box;
     overflow: hidden;
+
+    flex: 1;
 }
 
 .card-content {
@@ -49,4 +57,16 @@
 
 .page-card {
     background-color: #171717;
+}
+
+@media (max-width: 1000px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-container.wide {
+        grid-column: unset;
+        height: unset;
+        min-height: 400px;
+    }
 }
