@@ -25,15 +25,13 @@ h4 {
 
 .page-container-grid {
     display: grid;
-
-    grid-template-columns: 1fr 650px;
+    grid-template-columns: 1fr 500px;
+    margin-right: 10px;
 }
 
 
 .side-content {
     display: inline-block;
-
-    width: 650px;
     margin-right: -10px;
     margin-bottom: -10px;
 }
