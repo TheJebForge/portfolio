@@ -6,7 +6,6 @@ import React, {useRef} from "react";
 import {Card} from "@/components/Card";
 import {SVGBackground} from "@/components/SVGBackground";
 import GithubSVG from "@/app/images/github.svg";
-import SlideCarousel from "@/components/carousel/SlideCarousel";
 import Image from "next/image";
 
 export function HomePageClient({projects}) {
