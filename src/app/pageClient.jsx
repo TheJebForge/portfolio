@@ -34,7 +34,7 @@ export function HomePageClient({projects}) {
                 I&apos;ve started coding since I was 10, just doing various projects with VB 6.0.
                 Then I started learning all the other languages that I found fun, like C++ and Lua.
                 Been trying to make games for a while, attempting to make a game engine, learned a lot of things
-                in the process when it comes to vector math, trigonometry, matrices and so on.<br/><br/>Managed to get
+                in the process when it comes to vector math, trigonometry, matrices and so on.<br/><br/>Managed to get a job
                 as QA, then it moved to Test Automation, and eventually moved to Software Dev. Now I&apos;m just making
                 various software related projects on the side, while at work I&apos;m dealing with cloud or web projects.
                 <br/>
