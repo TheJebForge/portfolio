@@ -36,7 +36,7 @@ export function HomePageClient({projects}) {
                 Been trying to make games for a while, attempting to make a game engine, learned a lot of things
                 in the process when it comes to vector math, trigonometry, matrices and so on.<br/><br/>Managed to get a job
                 as QA, then it moved to Test Automation, and eventually moved to Software Dev. Now I&apos;m just making
-                various software related projects on the side, while at work I&apos;m dealing with cloud or web projects.
+                various software related projects on the side, while at work I&apos;m dealing with cloud and web projects.
                 <br/>
                 <button onClick={() => projectHeaderRef.current.scrollIntoView({behavior: 'smooth'})}
                         className={"about-button mt-4"}>View My Projects</button>
