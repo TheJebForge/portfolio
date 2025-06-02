@@ -31,12 +31,13 @@ export function HomePageClient({projects}) {
                 About me
             </div>
             <div className={'about-text'}>
-                I&apos;ve started coding since I was 10, just doing various projects with VB 6.0.
-                Then I started learning all the other languages that I found fun, like C++ and Lua.
-                Been trying to make games for a while, attempting to make a game engine, learned a lot of things
-                in the process when it comes to vector math, trigonometry, matrices and so on.<br/><br/>Managed to get a job
-                as QA, then it moved to Test Automation, and eventually moved to Software Dev. Now I&apos;m just making
-                various software related projects on the side, while at work I&apos;m dealing with cloud and web projects.
+	    	I started coding at age 10, building small projects in Visual Basic 6.0.
+	        As my interest grew, I explored other languages like C++ and Lua, especially drawn to the creative challenges of game development.
+	    	Over time, I experimented with creating a custom game engine, which helped me develop a solid foundation in vector math,
+	    	trigonometry, and matrix operations.<br/><br/>
+		Professionally, I began in Quality Assurance, moved into Test Automation, and eventually transitioned into Software Development.
+	    	Today, I work on cloud and web-based solutions while continuing to develop a variety of software projects in my spare time.
+	    	These side projects allow me to stay curious, experiment with new technologies, and continuously sharpen my skills.
                 <br/>
                 <button onClick={() => projectHeaderRef.current.scrollIntoView({behavior: 'smooth'})}
                         className={"about-button mt-4"}>View My Projects</button>
