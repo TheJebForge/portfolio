@@ -31,7 +31,8 @@ export async function readProject(name) {
         name,
         skills: [],
         index: [],
-        orders: []
+        orders: [],
+        noabouts: {}
     };
 
     const element = compiler(
@@ -72,7 +73,12 @@ export async function readProject(name) {
         }
 
         if (child.type === 'order') {
-            project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? '0';
+            project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? undefined;
+            continue;
+        }
+
+        if (child.type === 'noabout') {
+            project.noabouts[child.props.children[0].trim()] = true;
             continue;
         }
 
@@ -104,6 +110,10 @@ export async function readProject(name) {
     return project;
 }
 
+function hasAboutAndNotHidden(project, index) {
+    return project.about !== undefined && !project.noabouts[index]
+}
+
 export async function readAllProjects(index) {
     return (await Promise.all(
         (await listProjects())
@@ -114,9 +124,9 @@ export async function readAllProjects(index) {
             || p.index.includes(index))
         .sort(
         (a, b) => {
-            if (a.about === undefined && b.about !== undefined) {
+            if (!hasAboutAndNotHidden(a, index) && hasAboutAndNotHidden(b, index)) {
                 return 1;
-            } else if (a.about !== undefined && b.about === undefined) {
+            } else if (hasAboutAndNotHidden(a, index) && !hasAboutAndNotHidden(b, index)) {
                 return -1;
             } else {
                 const aO = a.orders[index] ?? (a.index.length === 0 ? a.orders['root'] : undefined);

@@ -50,12 +50,13 @@ export function HomePageClient({projects, index}) {
                 Things I&apos;ve done
             </div>
             <div className={"project-container"}>
-                {projects.map((project, index) => {
-                    const side = project.about && <SideContent about={project.about} slides={project.page.slides}/>
+                {projects.map((project, i) => {
+                    const side = (project.about && !project.noabouts[index])
+                        && <SideContent about={project.about} slides={project.page.slides}/>
 
                     return <Card
                         cardClass={'side-card'}
-                        key={index}
+                        key={i}
                         background={
                             project.icon && <SVGBackground>{project.icon}</SVGBackground>
                         }
