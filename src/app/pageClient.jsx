@@ -1,5 +1,6 @@
 'use client'
 
+import indices from '../../public/index.json';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import React, {useRef} from "react";
@@ -8,12 +9,15 @@ import {SVGBackground} from "@/components/SVGBackground";
 import GithubSVG from "@/app/images/github.svg";
 import Image from "next/image";
 
-export function HomePageClient({projects}) {
+export function HomePageClient({projects, index}) {
     const aboutMeHeaderRef = useRef(null);
     const projectHeaderRef = useRef(null);
 
+    const indexName = indices.find((i) => index === i.name)?.title ?? "Unknown";
+    const indexHint = index ? `?i=${index}` : '';
+
     return (
-        <div>
+        <>
             <Card cardClass={'main-card'} background={<SVGBackground type={'hero'}><GithubSVG/></SVGBackground>}>
                 <div className={"flex flex-col h-full"}>
                     <h1>
@@ -31,13 +35,13 @@ export function HomePageClient({projects}) {
                 About me
             </div>
             <div className={'about-text'}>
-	    	I started coding at age 10, building small projects in Visual Basic 6.0.
-	        As my interest grew, I explored other languages like C++ and Lua, especially drawn to the creative challenges of game development.
-	    	Over time, I experimented with creating a custom game engine, which helped me develop a solid foundation in vector math,
-	    	trigonometry, and matrix operations.<br/><br/>
-		Professionally, I began in Quality Assurance, moved into Test Automation, and eventually transitioned into Software Development.
-	    	Today, I work on cloud and web-based solutions while continuing to develop a variety of software projects in my spare time.
-	    	These side projects allow me to stay curious, experiment with new technologies, and continuously sharpen my skills.
+                I started coding at age 10, building small projects in Visual Basic 6.0.
+                As my interest grew, I explored other languages like C++ and Lua, especially drawn to the creative challenges of game development.
+                Over time, I experimented with creating a custom game engine, which helped me develop a solid foundation in vector math,
+                trigonometry, and matrix operations.<br/><br/>
+                Professionally, I began in Quality Assurance, moved into Test Automation, and eventually transitioned into Software Development.
+                Today, I work on cloud and web-based solutions while continuing to develop a variety of software projects in my spare time.
+                These side projects allow me to stay curious, experiment with new technologies, and continuously sharpen my skills.
                 <br/>
                 <button onClick={() => projectHeaderRef.current.scrollIntoView({behavior: 'smooth'})}
                         className={"about-button mt-4"}>View My Projects</button>
@@ -56,7 +60,7 @@ export function HomePageClient({projects}) {
                             project.icon && <SVGBackground>{project.icon}</SVGBackground>
                         }
                         cardStyle={project.background && {background: project.background}}
-                        link={project.page && `/${project.name}`}
+                        link={project.page && `/projects/${project.name}${indexHint}`}
                         side={side}>
                         {project.title && <h1>
                             {project.title}
@@ -77,14 +81,19 @@ export function HomePageClient({projects}) {
                     </Card>;
                 })}
             </div>
-        </div>
+            <div className={'index-subtext'}>
+                <a href={'/indices'}>
+                    You&apos;re currently viewing <b>{indexName}</b>. <b>Click here</b> to look at other indices
+                </a>
+            </div>
+        </>
     );
 }
 
 function getSlideContent(element) {
     if (element.src) {
         return <Image src={element.src} alt={element.alt} fill={true}
-                      objectFit={'contain'}/>;
+                      style={{objectFit: 'contain'}}/>;
     } else if (element.youtube) {
         return <iframe className={'youtube-player'}
                        src={`https://www.youtube.com/embed/${element.youtube}`}

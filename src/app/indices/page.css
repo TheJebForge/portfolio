@@ -1,0 +1,54 @@
+.index-button {
+    align-self: center;
+    background: linear-gradient(135deg, hsl(0, 100%, 20%) 0%, hsl(39, 100%, 43%) 100%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.index-button-title {
+    font-size: 32px;
+}
+
+.index-button-desc {
+    font-size: 18px;
+}
+
+.index-container-title {
+    font-size: 48px;
+    padding: 0 8px;
+}
+
+.index-container-subtitle {
+    font-size: 18px;
+    padding: 0 8px 12px 8px;
+    margin-top: -12px;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (min-width: 1800px) {
+    .index-button {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 1800px) {
+    .index-button {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .index-button {
+        width: 100%;
+    }
+
+    .index-container {
+        padding: 0 8px;
+    }
+}

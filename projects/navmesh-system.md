@@ -7,6 +7,9 @@
 <side href="https://resonite.com/">View Resonite Site</side>
 <slide youtube="TI-qpLwl4h8" title="Awards Ceremony"/>
 <slide youtube="4i_CRigihu4" title="WorldHop section"/>
+<index>root</index>
+<index>reso</index>
+<order index="reso">-1</order>
 
 #### What is this?
 

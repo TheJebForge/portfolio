@@ -99,6 +99,17 @@
     position: relative;
 }
 
+.index-subtext {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.index-subtext a {
+    padding: 32px;
+}
+
 @media (min-width: 1800px) {
     .project-container {
         grid-template-columns: 1fr 1fr 1fr;

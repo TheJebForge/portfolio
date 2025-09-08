@@ -1,6 +1,6 @@
 import './page.css';
-import {readAllProjects} from "@/utils";
 import {HomePageClient} from "@/app/pageClient";
+import {readAllProjects} from "@/projectUtils";
 
 
 export const metadata = {
@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-    const projects = await readAllProjects();
+    const projects = await readAllProjects('root');
 
     return <HomePageClient projects={projects}/>;
 }

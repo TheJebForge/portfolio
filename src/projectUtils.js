@@ -20,8 +20,7 @@ const TAGGED_META = [
     'title',
     'desc',
     'about',
-    'background',
-    'order'
+    'background'
 ];
 
 export async function readProject(name) {
@@ -30,7 +29,9 @@ export async function readProject(name) {
 
     const project = {
         name,
-        skills: []
+        skills: [],
+        index: [],
+        orders: []
     };
 
     const element = compiler(
@@ -49,7 +50,7 @@ export async function readProject(name) {
 
     let contentsCount = 0;
 
-    const sideLinks = [];
+    const sideCont = [];
     const slides = [];
     const normal = [];
 
@@ -70,10 +71,15 @@ export async function readProject(name) {
             continue;
         }
 
+        if (child.type === 'order') {
+            project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? '0';
+            continue;
+        }
+
         contentsCount++;
 
         if (child.type === 'side') {
-            sideLinks.push(
+            sideCont.push(
                 child.props.href ?
                     <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
                     : <span key={contentsCount}>{child.props.children}</span>
@@ -82,6 +88,8 @@ export async function readProject(name) {
             slides.push(child.props);
         } else if (child.type === 'skill' && child.props.children) {
             project.skills.push(child.props.children[0]);
+        } else if (child.type === 'index' && child.props.children) {
+            project.index.push(child.props.children[0]);
         } else {
             normal.push(child);
         }
@@ -89,26 +97,30 @@ export async function readProject(name) {
 
     project.page = contentsCount ? {
         contents: normal,
-        side: sideLinks,
+        side: sideCont,
         slides: slides.length > 0 ? slides : undefined
     } : null;
 
     return project;
 }
 
-export async function readAllProjects() {
+export async function readAllProjects(index) {
     return (await Promise.all(
         (await listProjects())
             .map(name => readProject(name))
-    )).sort(
+    ))
+        .filter((p) => p.index.length === 0
+            || (index === 'root' && p.index.includes('root'))
+            || p.index.includes(index))
+        .sort(
         (a, b) => {
             if (a.about === undefined && b.about !== undefined) {
                 return 1;
             } else if (a.about !== undefined && b.about === undefined) {
                 return -1;
             } else {
-                const aO = a.order;
-                const bO = b.order;
+                const aO = a.orders[index] ?? (a.index.length === 0 ? a.orders['root'] : undefined);
+                const bO = b.orders[index] ?? (b.index.length === 0 ? b.orders['root'] : undefined);
 
                 if (aO === undefined) {
                     return 1;

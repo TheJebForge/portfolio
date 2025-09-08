@@ -1,8 +1,8 @@
-import {listProjects, readProject} from "@/utils";
+import './page.css'
+import {listProjects, readProject} from "@/projectUtils";
 import {Card} from "@/components/Card";
 import {SVGBackground} from "@/components/SVGBackground";
 import SlideCarousel from "@/components/carousel/SlideCarousel";
-import './page.css'
 import React from "react";
 
 export async function generateStaticParams() {
@@ -11,7 +11,9 @@ export async function generateStaticParams() {
     }))
 }
 
-export async function generateMetadata({ params: { projectURL }}) {
+export async function generateMetadata({ params }) {
+    const { projectURL } = await params;
+
     const project = await readProject(projectURL);
 
     return {
@@ -24,9 +26,9 @@ export async function generateMetadata({ params: { projectURL }}) {
     };
 }
 
-export default async function Page({
-                                       params: {projectURL}
-                                   }) {
+export default async function Page({params}) {
+    const { projectURL } = await params;
+
     const project = await readProject(projectURL);
 
     const carousel = <div className={'carousel'}>
