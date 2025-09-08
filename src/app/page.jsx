@@ -15,5 +15,5 @@ export const metadata = {
 export default async function Home() {
     const projects = await readAllProjects('root');
 
-    return <HomePageClient projects={projects}/>;
+    return <HomePageClient projects={projects} index={'root'}/>;
 }
