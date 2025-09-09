@@ -1,6 +1,7 @@
 <title>Navmesh System</title>
 <desc>Pathfinding system for Resonite</desc>
 <skill>Pathfinding</skill>
+<skill>ProtoFlux</skill>
 <icon>mesh.svg</icon>
 <background>linear-gradient(135deg, rgb(67 118 128) 10%, rgb(50 124 79) 100%)</background>
 <side href="https://wiki.resonite.com/Navmesh_System">View Resonite Wiki</side>
@@ -8,11 +9,11 @@
 <slide src="/images/navmesh_system.jpg" alt="Navmesh System Demo World" show-title/>
 <slide youtube="TI-qpLwl4h8" title="Awards Ceremony"/>
 <slide youtube="4i_CRigihu4" title="WorldHop section"/>
-<index>reso</index>
-<order index="reso">-1</order>
 <about>
 Implementation of A* and Funnel algorithm for Resonite wrapped in easy to use system
 </about>
+<noabout>root</noabout>
+<order index="reso">-1</order>
 
 #### What is this?
 

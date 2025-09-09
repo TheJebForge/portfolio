@@ -6,6 +6,7 @@
 <background>linear-gradient(135deg, hsl(0, 100%, 20%) 0%, hsl(39, 100%, 43%) 100%)</background>
 <order>2</order>
 <side href="https://github.com/TheJebForge/portfolio">View Project's Github</side>
+<order index="reso">1</order>
 
 #### Why?
 
@@ -17,6 +18,9 @@ The site was created with Next.js static builder, I'm very familiar with React w
 web frontend, so it looked like the perfect choice. Project pages are just markdown files with metadata
 tags on top of the file, I can easily add new projects to this portfolio by adding more markdown files to 
 `projects/` folder.
+
+Projects can also be hidden using the index system, where there can be multiple versions of the front page.
+Projects are assigned to indices using meta tags, and can be customized on how they appear on the page.
 
 The site is hosted with GitHub Pages, since the source code of this site is public, GitHub provides
 free hosting for static pages.

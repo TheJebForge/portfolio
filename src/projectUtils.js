@@ -64,40 +64,30 @@ export async function readProject(name) {
 
         if (TAGGED_META.includes(child.type) && child.props.children) {
             project[child.type] = child.props.children[0].trim();
-            continue;
-        }
-
-        if (child.type === 'meta') {
+        } else if (child.type === 'meta') {
             project[child.props.name ?? 'unknown'] = child.props.content;
-            continue;
-        }
-
-        if (child.type === 'order') {
+        } else if (child.type === 'order') {
             project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? undefined;
-            continue;
-        }
-
-        if (child.type === 'noabout') {
+        } else if (child.type === 'noabout') {
             project.noabouts[child.props.children[0].trim()] = true;
-            continue;
-        }
-
-        contentsCount++;
-
-        if (child.type === 'side') {
-            sideCont.push(
-                child.props.href ?
-                    <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
-                    : <span key={contentsCount}>{child.props.children}</span>
-            );
-        } else if (child.type === 'slide') {
-            slides.push(child.props);
         } else if (child.type === 'skill' && child.props.children) {
             project.skills.push(child.props.children[0]);
         } else if (child.type === 'index' && child.props.children) {
             project.index.push(child.props.children[0]);
         } else {
-            normal.push(child);
+            contentsCount++;
+
+            if (child.type === 'side') {
+                sideCont.push(
+                    child.props.href ?
+                        <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
+                        : <span key={contentsCount}>{child.props.children}</span>
+                );
+            } else if (child.type === 'slide') {
+                slides.push(child.props);
+            } else {
+                normal.push(child);
+            }
         }
     }
 
