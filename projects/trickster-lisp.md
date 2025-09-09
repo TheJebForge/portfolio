@@ -22,15 +22,11 @@ that I had to create/use to get here should be impressive.
 #### What it took
 
 I started creating the project with 
-<Tooltip
-    link="https://www.antlr.org/"
-    value="ANother Tool for Language Recognition">ANTLR</Tooltip> 
+<Tooltip link="https://www.antlr.org/" value="ANother Tool for Language Recognition">ANTLR</Tooltip> 
 which allowed me to generate a parser to take written code into a 
 <Tooltip value="Context Syntax Tree">CST</Tooltip>.
 Using provided CST, I'm able to create an 
-<Tooltip
-    link="https://en.wikipedia.org/wiki/Abstract_syntax_tree"
-    value="Abstract Syntax Tree">AST</Tooltip> 
+<Tooltip link="https://en.wikipedia.org/wiki/Abstract_syntax_tree" value="Abstract Syntax Tree">AST</Tooltip> 
 that represents the code in a usable form. This project supports preprocessor macros, so before
 I start conversion to Trickster spells, I apply the macros to any call expression that has the macro's
 name, unwrapping the code that the macro contains and replacing the macro's argument markers with whatever
