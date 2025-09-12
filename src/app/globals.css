@@ -46,8 +46,21 @@ h3 {
     font-size: 24px;
 }
 
-p {
+p, ul {
     margin-bottom: 15px;
+}
+
+p:has(+ ul) {
+    margin-bottom: unset;
+}
+
+ul > li {
+    text-indent: 1rem;
+}
+
+ul > li::before {
+    content: '•';
+    margin-right: 0.75rem;
 }
 
 code {

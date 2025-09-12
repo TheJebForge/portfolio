@@ -9,7 +9,7 @@
 <side href="https://github.com/streamduck-org/elgato-streamdeck">View Project's Github</side>
 <side href="https://crates.io/crates/elgato-streamdeck">View crates.io</side>
 <slide src="/images/streamdeck-sample.jpg" alt="Elgato Stream Deck running library's sample project" show-title/>
-<order index="reso">2</order>
+<order index="reso">3</order>
 
 #### What is this?
 
