@@ -37,4 +37,9 @@ can be seen by others
 The initial rotary version of the menu was developed in 2 weekends, and ever since then I continued to update the menu
 in different ways. Initially the menu supported only up to 8 items, but then to support the button based navigation, I
 updated everything to use 9 items instead. The only things that had to be changed is how many items the UI should read,
-and how many snappable points menu gems are supposed to have.
+and how many snappable points menu gems are supposed to have
+
+#### What's next?
+I plan to iterate on this menu once again, make it a lot more modular and less hardcoded to just me, so I can later release
+it as a system others could use. I already had quite a few people ask me if they could have a version of it, but since
+it's made specifically for me and my character, can't really share it that easily
