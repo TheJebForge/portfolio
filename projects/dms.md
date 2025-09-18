@@ -6,6 +6,7 @@
 <background>linear-gradient(133deg,rgba(135, 26, 33, 1) 0%, rgba(87, 19, 19, 1) 100%)</background>
 <index>reso</index>
 <order index="reso">2</order>
+<slide youtube="fK9itPTiwX0" title="DMS Demo"/>
 <side><span style="color: dimgray">No links</span></side>
 
 #### What is this?
