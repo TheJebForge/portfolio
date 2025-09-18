@@ -55,38 +55,40 @@ export async function readProject(name) {
     const slides = [];
     const normal = [];
 
-    for (const child of element.props.children) {
-        if (child.type === 'icon' && child.props.children) {
-            const Icon = (await import('/projects/icons/' + child.props.children[0])).default;
-            project.icon = <Icon/>;
-            continue;
-        }
+    if (element?.props?.children) {
+        for (const child of element.props.children) {
+            if (child.type === 'icon' && child.props.children) {
+                const Icon = (await import('/projects/icons/' + child.props.children[0])).default;
+                project.icon = <Icon/>;
+                continue;
+            }
 
-        if (TAGGED_META.includes(child.type) && child.props.children) {
-            project[child.type] = child.props.children[0].trim();
-        } else if (child.type === 'meta') {
-            project[child.props.name ?? 'unknown'] = child.props.content;
-        } else if (child.type === 'order') {
-            project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? undefined;
-        } else if (child.type === 'noabout') {
-            project.noabouts[child.props.children[0].trim()] = true;
-        } else if (child.type === 'skill' && child.props.children) {
-            project.skills.push(child.props.children[0]);
-        } else if (child.type === 'index' && child.props.children) {
-            project.index.push(child.props.children[0]);
-        } else {
-            contentsCount++;
-
-            if (child.type === 'side') {
-                sideCont.push(
-                    child.props.href ?
-                        <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
-                        : <span key={contentsCount}>{child.props.children}</span>
-                );
-            } else if (child.type === 'slide') {
-                slides.push(child.props);
+            if (TAGGED_META.includes(child.type) && child.props.children) {
+                project[child.type] = child.props.children[0].trim();
+            } else if (child.type === 'meta') {
+                project[child.props.name ?? 'unknown'] = child.props.content;
+            } else if (child.type === 'order') {
+                project.orders[child.props.index ?? 'root'] = child.props.children[0]?.trim() ?? undefined;
+            } else if (child.type === 'noabout') {
+                project.noabouts[child.props.children[0].trim()] = true;
+            } else if (child.type === 'skill' && child.props.children) {
+                project.skills.push(child.props.children[0]);
+            } else if (child.type === 'index' && child.props.children) {
+                project.index.push(child.props.children[0]);
             } else {
-                normal.push(child);
+                contentsCount++;
+
+                if (child.type === 'side') {
+                    sideCont.push(
+                        child.props.href ?
+                            <a href={child.props.href} key={contentsCount} target={'_blank'}>{child.props.children}</a>
+                            : <span key={contentsCount}>{child.props.children}</span>
+                    );
+                } else if (child.type === 'slide') {
+                    slides.push(child.props);
+                } else {
+                    normal.push(child);
+                }
             }
         }
     }

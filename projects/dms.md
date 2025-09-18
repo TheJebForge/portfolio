@@ -5,8 +5,8 @@
 <icon>pentagram.svg</icon>
 <background>linear-gradient(133deg,rgba(135, 26, 33, 1) 0%, rgba(87, 19, 19, 1) 100%)</background>
 <index>reso</index>
-<order index="reso">1</order>
-<side>No links yet...</side>
+<order index="reso">2</order>
+<side><span style="color: dimgray">No links</span></side>
 
 #### What is this?
 It's a custom modular menu I've created for myself from the simple necessity of being able to spawn tools while in VR...
