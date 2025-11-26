@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="582.93799"
+   height="663.013"
+   viewBox="0 0 582.93799 663.013"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="New document 1.2025_11_26_16_38_46.0.svg"
+   inkscape:export-filename="Documents/Projects/portfolio/projects/icons/badge-project.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="1.4550781"
+     inkscape:cx="255.65638"
+     inkscape:cy="256"
+     inkscape:window-width="1707"
+     inkscape:window-height="996"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="582.93799"
+       height="663.013"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="perspective-envelope"
+       up_left_point="204.85764,56.109058"
+       up_right_point="404.39576,0"
+       down_left_point="171.8125,502.32617"
+       down_right_point="399.53618,550.92196"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       deform_type="perspective"
+       horizontal_mirror="false"
+       vertical_mirror="false"
+       overflow_perspective="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(63.476002,55.525002)">
+    <g
+       id="g2"
+       inkscape:path-effect="#path-effect1">
+      <path
+         id="rect1"
+         style="fill:none;stroke:#e82020;stroke-width:20;stroke-linejoin:miter;stroke-miterlimit:14.8;stroke-dasharray:none;paint-order:normal"
+         d="m 294.83169,30.808834 c -20.22023,5.685377 -36.85422,24.759449 -37.88727,43.0013 -1.04542,18.460674 14.19136,30.152906 34.79746,25.75231 21.48797,-4.588951 40.11784,-24.686055 40.75627,-44.474238 0.63024,-19.535425 -16.60049,-30.202527 -37.66646,-24.279372 z m -3.08981,68.75361 -66.12682,14.120416 c -14.2569,3.04435 -26.26111,16.74397 -27.3105,30.91419 l -18.38662,248.27928 c -1.2335,16.65627 9.73246,31.65527 25.05451,33.53766 l 71.66583,8.80451 c -22.44108,-2.74687 -40.94895,13.74045 -42.26628,37.001 -1.33559,23.58375 15.3808,46.73959 38.30227,51.63038 24.04032,5.12948 45.09128,-11.7235 45.92366,-37.526 0.81995,-25.41839 -18.41291,-48.20069 -41.92163,-51.10071 l 83.83021,10.29896 c 21.75231,2.67238 40.0664,-12.13194 40.251,-33.05983 l 2.69932,-306.01724 C 403.60799,89.308368 387.46337,79.122515 367.90856,83.298161 Z"
+         inkscape:original-d="m 273.52539,17.232422 a 38.459988,38.459988 0 0 0 -38.46094,38.460937 38.459988,38.459988 0 0 0 38.46094,38.458985 38.459988,38.459988 0 0 0 38.45899,-38.458985 38.459988,38.459988 0 0 0 -38.45899,-38.460937 z m 0,76.919922 h -71.47461 c -16.75199,0 -30.23828,13.486296 -30.23828,30.238276 v 270.77735 c 0,16.75199 13.48629,30.23828 30.23828,30.23828 h 71.45703 a 38.459988,38.459988 0 0 0 -38.44336,38.46094 38.459988,38.459988 0 0 0 38.46094,38.45898 38.459988,38.459988 0 0 0 38.45899,-38.45898 38.459988,38.459988 0 0 0 -38.44141,-38.46094 H 345 c 16.75199,0 30.23828,-13.48629 30.23828,-30.23828 V 124.39062 c 0,-16.75198 -13.48629,-30.238276 -30.23828,-30.238276 z" />
+      <path
+         style="fill:#e82020;fill-opacity:1;stroke:#e82020;stroke-width:20;stroke-linejoin:miter;stroke-miterlimit:14.8;stroke-dasharray:none;paint-order:normal"
+         id="rect2"
+         width="141.38615"
+         height="267.6731"
+         x="206.86176"
+         y="128.51544"
+         rx="8.9342337"
+         ry="8.9342337"
+         sodipodi:type="rect"
+         d="m 235.77312,141.23312 124.89344,-22.7512 c 5.69456,-1.03735 10.24616,2.12275 10.15028,7.10977 l -5.27282,274.25329 c -0.11386,5.92185 -5.24314,10.2518 -11.43503,9.69559 l -134.2715,-12.06151 c -4.67896,-0.4203 -8.14765,-4.83875 -7.82047,-9.89694 l 15.33259,-237.04318 c 0.28212,-4.36153 4.02229,-8.50408 8.42351,-9.30582 z" />
+    </g>
+  </g>
+</svg>
