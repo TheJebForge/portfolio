@@ -44,10 +44,7 @@ Rust language was somewhat of a mistake, but I'm glad I did. Implementing plugin
 on Rust would require me to essentially write my application multiple times.
 I would have to write the actual application, then I would have to write the
 application's 
-<Tooltip
-    link="https://en.wikipedia.org/wiki/Foreign_function_interface"
-    value="Foreign Function Interface">
-    FFI</Tooltip>,
+<Tooltip link="https://en.wikipedia.org/wiki/Foreign_function_interface" value="Foreign Function Interface">FFI</Tooltip>,
 and then write FFI for plugins to use, and even then I'm not done.
 I'll also have to write an entire SDK for plugins, so plugin dev wouldn't be miserable.
 
